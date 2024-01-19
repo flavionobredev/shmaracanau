@@ -12,8 +12,8 @@ const FINAL_IMAGE_SIZE = 1080;
 const ROUNDED_PERCENT_SIZE = 0.75;
 
 const image = ref({
-  // src: "",
-  src: "https://scontent.cdninstagram.com/v/t39.30808-6/419719520_18121985164330150_3492284965720068883_n.jpg?stp=dst-jpg_e35&efg=eyJ2ZW5jb2RlX3RhZyI6ImltYWdlX3VybGdlbi4xNDQweDE4MDAuc2RyIn0&_nc_ht=scontent.cdninstagram.com&_nc_cat=110&_nc_ohc=yU65OZU9GwwAX_lfx_X&edm=APs17CUAAAAA&ccb=7-5&ig_cache_key=MzI4MTU4NzM4MzY5ODA1ODAyNw%3D%3D.2-ccb7-5&oh=00_AfDQtpU8ZmjPve7c5C7wi_F59L50Tr7ZzU8Z6QYIEORteA&oe=65ADB690&_nc_sid=10d13b",
+  src: "",
+  // src: "https://scontent.cdninstagram.com/v/t39.30808-6/419719520_18121985164330150_3492284965720068883_n.jpg?stp=dst-jpg_e35&efg=eyJ2ZW5jb2RlX3RhZyI6ImltYWdlX3VybGdlbi4xNDQweDE4MDAuc2RyIn0&_nc_ht=scontent.cdninstagram.com&_nc_cat=110&_nc_ohc=yU65OZU9GwwAX_lfx_X&edm=APs17CUAAAAA&ccb=7-5&ig_cache_key=MzI4MTU4NzM4MzY5ODA1ODAyNw%3D%3D.2-ccb7-5&oh=00_AfDQtpU8ZmjPve7c5C7wi_F59L50Tr7ZzU8Z6QYIEORteA&oe=65ADB690&_nc_sid=10d13b",
   // src: "https://instagram.ffor27-1.fna.fbcdn.net/v/t39.30808-6/376555958_18283398628178839_2985789906097357351_n.jpg?stp=dst-jpg_e35_s640x640_sh0.08&efg=eyJ2ZW5jb2RlX3RhZyI6ImltYWdlX3VybGdlbi4xNDQweDk2My5zZHIifQ&_nc_ht=instagram.ffor27-1.fna.fbcdn.net&_nc_cat=107&_nc_ohc=EeVi-FwiM1MAX8AgqQs&edm=ABmJApAAAAAA&ccb=7-5&ig_cache_key=MzE4NzU2OTk5MTQxMDk2Nzk0NA%3D%3D.2-ccb7-5&oh=00_AfCYbShSDGPvNxxxMajCDA5wzgmKIjVHGgP0ZwjX92Z5bw&oe=65ADB714&_nc_sid=b41fef",
 });
 
@@ -91,12 +91,14 @@ const download = () => {
       import.meta.url
     ).href;
 
-    newCtx.drawImage(overlay, 0, 0, FINAL_IMAGE_SIZE, FINAL_IMAGE_SIZE);
-    const link = document.createElement("a");
+    overlay.onload = () => {
+      newCtx.drawImage(overlay, 0, 0, FINAL_IMAGE_SIZE, FINAL_IMAGE_SIZE);
+      const link = document.createElement("a");
 
-    link.download = "image.png";
-    link.href = newCanvas.toDataURL();
-    link.click();
+      link.download = "image.png";
+      link.href = newCanvas.toDataURL();
+      link.click();
+    };
   }
 };
 
@@ -119,7 +121,7 @@ onUnmounted(() => {
 <template>
   <section class="flex flex-col md:flex-row justify-center gap-10">
     <div
-      class="mx-auto w-[80svw] min-h-[200px] md:mx-0 md:min-h-[none] md:h-[350px] md:w-[350px]"
+      class="w-full mx-auto min-h-[200px] md:mx-0 md:min-h-[none] md:w-[350px]"
     >
       <Cropper
         ref="cropper"
@@ -163,10 +165,11 @@ onUnmounted(() => {
         accept="image/*"
       />
     </div>
-    <div class="mx-auto w-[80svw] md:mx-0 md:w-[350px] md:h-[350px]">
-      <div class="w-[80svw] md:w-[350px] md:h-[350px]">
+    <div class="mx-auto md:mx-0 md:w-[350px]">
+      <div class="md:w-[350px]">
         <div class="relative">
           <img
+            draggable="false"
             v-if="result.canvas.toDataURL"
             :src="result.canvas.toDataURL()"
             class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2"
@@ -175,12 +178,9 @@ onUnmounted(() => {
             }%`"
           />
           <img
+            draggable="false"
             src="../../assets/images/tools/renascer-overlay.png"
             class="relative top-0 left-0"
-          />
-          <span
-            v-if="!result.canvas.toDataURL"
-            class="w-[80svw] h-[300px] md:w-[350px] md:h-[350px] bg-[#00000050] absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2"
           />
           <p
             v-if="!result.canvas.toDataURL"
