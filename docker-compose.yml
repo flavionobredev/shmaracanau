@@ -1,0 +1,18 @@
+version: '3.8'
+
+services:
+  readers-letter-app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: shmaracanau
+    tty: true # for prettier logs
+    volumes:
+      - .:/usr/shmaracanau/app
+    ports:
+      - "3000:3000"
+    entrypoint: |
+      sh -c "
+        npm install
+        npm run dev
+      "
