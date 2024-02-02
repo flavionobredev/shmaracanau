@@ -8,11 +8,11 @@ const buttons = [
     to: "https://docs.google.com/forms/d/e/1FAIpQLSfsUhuuwULS2qTilNYAgoIUV_C39NaGkpdMgfjvxvAtTn1yUQ/viewform",
     target: "_blank",
   },
-  {
-    text: "👕 Encomende sua blusa do Renascer",
-    to: "https://forms.gle/SznS7rHYNp6Aq6WW6",
-    target: "_blank",
-  },
+  // {
+  //   text: "👕 Encomende sua blusa do Renascer",
+  //   to: "https://forms.gle/SznS7rHYNp6Aq6WW6",
+  //   target: "_blank",
+  // },
   {
     text: "Personalizar foto do Perfil",
     to: "/tools/profile-customization",
