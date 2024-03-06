@@ -3,21 +3,21 @@ useHead({
   title: "Apaixonados por Deus e pela evangelização!",
 });
 const buttons = [
-  {
-    text: "🌟 Inscrições Renascer (Participantes)",
-    to: "https://docs.google.com/forms/d/e/1FAIpQLSfsUhuuwULS2qTilNYAgoIUV_C39NaGkpdMgfjvxvAtTn1yUQ/viewform",
-    target: "_blank",
-  },
+  // {
+  //   text: "🌟 Inscrições Renascer (Participantes)",
+  //   to: "https://docs.google.com/forms/d/e/1FAIpQLSfsUhuuwULS2qTilNYAgoIUV_C39NaGkpdMgfjvxvAtTn1yUQ/viewform",
+  //   target: "_blank",
+  // },
   // {
   //   text: "👕 Encomende sua blusa do Renascer",
   //   to: "https://forms.gle/SznS7rHYNp6Aq6WW6",
   //   target: "_blank",
   // },
-  {
-    text: "Personalizar foto do Perfil",
-    to: "/tools/profile-customization",
-    target: "",
-  },
+  // {
+  //   text: "Personalizar foto do Perfil",
+  //   to: "/tools/profile-customization",
+  //   target: "",
+  // },
   {
     text: "Conheça nosso CEV",
     to: "https://maps.app.goo.gl/EHbuBNbgBJwBXvuX6?g_st=ic",
@@ -30,9 +30,9 @@ const buttons = [
     <div class="my-8">
       <header class="flex flex-col items-center">
         <img
-          src="./../assets/images/logos/logo-home.svg"
+          src="./../assets/images/logos/logo-home.jpg"
           alt="Logo da Comunidade Católica Shalom"
-          class="mx-auto w-[78px] md:w-[96px] mb-4"
+          class="mx-auto w-[78px] md:w-[96px] mb-4 rounded-full"
         />
         <h1 class="text-center text-xl md:text-3xl font-extrabold text-white">
           Shalom Maracanaú
@@ -43,7 +43,7 @@ const buttons = [
         <a
           href="https://instagram.com/shalommaracanau"
           target="_blank"
-          class="click mt-3 text-[#e84411] font-bold text-xs md:text-sm bg-[#f9c997] rounded py-1 px-2"
+          class="click mt-3 text-[#593473] font-bold text-xs md:text-sm bg-white rounded py-1 px-2"
           >@shalommaracanau</a
         >
       </header>
@@ -52,7 +52,7 @@ const buttons = [
       <ul class="grid grid-flow-row gap-3">
         <NuxtLink
           v-for="btn in buttons"
-          class="click text-center bg-white rounded text-[#e84411] py-3 px-6 font-extrabold w-full"
+          class="click text-center bg-white rounded text-[#775494] py-3 px-6 font-extrabold w-full"
           :to="btn.to"
           :target="btn.target"
           >{{ btn.text }}

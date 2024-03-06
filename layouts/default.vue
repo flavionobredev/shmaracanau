@@ -6,6 +6,7 @@
 </template>
 <style scoped>
 .main-default {
-  @apply min-h-svh pb-20 w-[80svw] md:w-auto mx-auto md:mx-0 ;
+  @apply min-h-svh pb-20 w-[80svw] md:w-auto mx-auto md:mx-0;
+  @apply bg-[#775494];
 }
 </style>
