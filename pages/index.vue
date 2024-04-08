@@ -19,6 +19,11 @@ const buttons = [
   //   target: "",
   // },
   {
+    text: "🎶 Audições: Show Resposta",
+    to: "https://forms.gle/hDrZsz1VEMvnWAQA8",
+    target: "_blank",
+  },
+  {
     text: "Conheça nosso CEV",
     to: "https://maps.app.goo.gl/EHbuBNbgBJwBXvuX6?g_st=ic",
     target: "_blank",
