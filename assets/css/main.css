@@ -1,12 +1,12 @@
 @import url("https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,100;9..40,200;9..40,300;9..40,400;9..40,500;9..40,600;9..40,700;9..40,800;9..40,900;9..40,1000&display=swap");
 
 body {
+  @apply bg-gradient-to-br from-[#0097f4] to-[#fae100];
   font-family: "DM Sans", sans-serif;
   font-size: 14px;
   font-weight: 400;
   line-height: 1.5;
   color: #212529;
-  background-color: #e84411;
 }
 
 button:active {
@@ -19,22 +19,4 @@ button:active {
 
 .click:active {
   transform: scale(0.98);
-}
-
-/* scroll */
-::-webkit-scrollbar {
-  width: 10px;
-}
-
-::-webkit-scrollbar-track {
-  background: #ec7652;
-}
-
-::-webkit-scrollbar-thumb {
-  background: #b6330b;
-  border-radius: 100px;
-}
-
-::-webkit-scrollbar-thumb:hover {
-  background: #7a2308;
 }

@@ -13,21 +13,21 @@ const buttons = [
   //   to: "https://forms.gle/SznS7rHYNp6Aq6WW6",
   //   target: "_blank",
   // },
+  {
+    text: "Personalizar foto do Perfil",
+    to: "/tools/profile-customization",
+    target: "",
+  },
   // {
-  //   text: "Personalizar foto do Perfil",
-  //   to: "/tools/profile-customization",
-  //   target: "",
+  //   text: "🎶 Audições: Show Resposta",
+  //   to: "https://forms.gle/hDrZsz1VEMvnWAQA8",
+  //   target: "_blank",
   // },
-  {
-    text: "🎶 Audições: Show Resposta",
-    to: "https://forms.gle/hDrZsz1VEMvnWAQA8",
-    target: "_blank",
-  },
-  {
-    text: "Conheça nosso CEV",
-    to: "https://maps.app.goo.gl/EHbuBNbgBJwBXvuX6?g_st=ic",
-    target: "_blank",
-  },
+  // {
+  //   text: "Conheça nosso CEV",
+  //   to: "https://maps.app.goo.gl/EHbuBNbgBJwBXvuX6?g_st=ic",
+  //   target: "_blank",
+  // },
 ];
 </script>
 <template>
@@ -35,7 +35,7 @@ const buttons = [
     <div class="my-8">
       <header class="flex flex-col items-center">
         <img
-          src="./../assets/images/logos/logo-home.jpg"
+          src="./../assets/images/logos/logo-home.png"
           alt="Logo da Comunidade Católica Shalom"
           class="mx-auto w-[78px] md:w-[96px] mb-4 rounded-full"
         />
@@ -48,7 +48,7 @@ const buttons = [
         <a
           href="https://instagram.com/shalommaracanau"
           target="_blank"
-          class="click mt-3 text-[#593473] font-bold text-xs md:text-sm bg-white rounded py-1 px-2"
+          class="click mt-3 font-bold text-xs md:text-sm bg-white rounded py-1 px-2"
           >@shalommaracanau</a
         >
       </header>
@@ -57,7 +57,7 @@ const buttons = [
       <ul class="grid grid-flow-row gap-3">
         <NuxtLink
           v-for="btn in buttons"
-          class="click text-center bg-white rounded text-[#775494] py-3 px-6 font-extrabold w-full"
+          class="click text-center bg-white rounded py-3 px-6 font-extrabold w-full"
           :to="btn.to"
           :target="btn.target"
           >{{ btn.text }}

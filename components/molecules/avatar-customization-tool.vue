@@ -1,10 +1,9 @@
 <script setup lang="ts">
 import { createTextVNode } from "vue";
 import {
-  Cropper,
-  Preview,
   CircleStencil,
-  type CropperResult,
+  Cropper,
+  type CropperResult
 } from "vue-advanced-cropper";
 import "vue-advanced-cropper/dist/style.css";
 
@@ -145,7 +144,7 @@ onUnmounted(() => {
       </div>
 
       <button
-        class="w-full mt-3 bg-white text-[#e84411] rounded py-3 px-6 font-extrabold"
+        class="w-full mt-3 bg-white rounded py-3 px-6 font-extrabold"
         @click="file.click()"
       >
         Selecionar Foto
@@ -192,7 +191,7 @@ onUnmounted(() => {
       </div>
       <button
         v-if="!!result.canvas.toDataURL"
-        class="w-full mt-3 bg-white text-[#e84411] rounded py-3 px-6 font-extrabold"
+        class="w-full mt-3 bg-white rounded py-3 px-6 font-extrabold"
         @click="download"
       >
         Baixar Imagem

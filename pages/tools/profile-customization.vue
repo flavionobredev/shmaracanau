@@ -8,8 +8,8 @@ import AvatarCustomizationTool from "~/components/molecules/avatar-customization
 <template>
   <header class="text-center py-5 text-white mb-3 md:mb-6 mx-auto w-[80%] md:w-auto">
     <img src="../../assets/images/logos/renascer-2024.svg" class="mx-auto w-[100px] md:w-[150px]" />
-    <p class="text-xs text-white italic mb-4">11 à 13/fev - Liceu de Maracanaú</p>
-    <h1 class="font-extrabold text-lg md:text-2xl">Renascer... <span class="text-[#fae197]">Eu vou!</span></h1>
+    <p class="text-xs text-white italic mb-4">2 a 4/mar - Liceu de Maracanaú</p>
+    <h1 class="font-extrabold text-lg md:text-2xl">Renascer... Eu vou!</h1>
     <h2 class="text-sm md:text-base">
       Personalize sua foto de perfil com a imagem do Renascer 2024!
     </h2>

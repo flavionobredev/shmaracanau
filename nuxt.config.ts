@@ -5,7 +5,7 @@ export default defineNuxtConfig({
       meta: [
         { charset: "utf-8" },
         { name: "viewport", content: "width=device-width, initial-scale=1" },
-        { name: "theme-color", content: "#e84411" },
+        { name: "theme-color", content: "#0097f4" },
         {
           name: "keywords",
           content:
