@@ -11,7 +11,7 @@ import AvatarCustomizationTool from "~/components/molecules/avatar-customization
     <p class="text-xs text-white italic mb-4">2 a 4/mar - Liceu de Maracanaú</p>
     <h1 class="font-extrabold text-lg md:text-2xl">Renascer... Eu vou!</h1>
     <h2 class="text-sm md:text-base">
-      Personalize sua foto de perfil com a imagem do Renascer 2024!
+      Personalize sua foto de perfil com a imagem do Renascer 2025!
     </h2>
   </header>
   <AvatarCustomizationTool />
