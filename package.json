@@ -11,11 +11,12 @@
   },
   "devDependencies": {
     "@nuxtjs/tailwindcss": "^6.10.4",
-    "nuxt": "^3.9.3",
+    "nuxt": "^3.15.4",
     "vue": "^3.4.14",
     "vue-router": "^4.2.5"
   },
   "dependencies": {
+    "sqlite3": "^5.1.7",
     "vue-advanced-cropper": "^2.8.8"
   }
 }
