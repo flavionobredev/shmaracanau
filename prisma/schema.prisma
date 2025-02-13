@@ -1,6 +1,6 @@
 datasource db {
   provider = "sqlite"
-  url      = "file:./shmaracanau.db"
+  url      = env("DATABASE_SQLITE_NAME")
 }
 
 generator client {

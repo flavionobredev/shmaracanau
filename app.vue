@@ -8,7 +8,7 @@ useHead({
 <template>
   <div>
     <NuxtLayout>
-      <RouterView />
+      <NuxtPage />
     </NuxtLayout>
   </div>
 </template>
