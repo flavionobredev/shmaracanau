@@ -25,3 +25,4 @@ logs
 
 # sqlite db
 *.db
+*.db-journal
