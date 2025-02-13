@@ -3,7 +3,6 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "prebuild": "npx prisma db push",
     "build": "nuxt build",
     "dev": "nuxt dev",
     "generate": "nuxt generate",
