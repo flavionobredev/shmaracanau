@@ -7,6 +7,6 @@ export class ThemeConfigRepository {
   async testFromDb() {
     await this.themeConfigModel.create({ theme: "default" });
 
-    return await this.themeConfigModel.find();
+    return await this.themeConfigModel.find({}, {}, { lean: true });
   }
 }
