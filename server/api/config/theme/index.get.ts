@@ -8,7 +8,7 @@ export default defineEventHandler(async () => {
     console.log("pre request");
     const result = await repository.testFromDb();
     console.log("result -> ", result);
-    return result;
+    return { data: result };
   } catch (error) {
     console.log("error -> ", error);
     return { message: "erorr", error };
