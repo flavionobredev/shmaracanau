@@ -68,6 +68,6 @@ const buttons = [
 </template>
 <style scoped>
 .btn-home {
-  @apply text-center bg-white rounded;
+  @reference text-center bg-white rounded;
 }
 </style>

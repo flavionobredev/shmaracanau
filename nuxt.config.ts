@@ -40,6 +40,9 @@ export default defineNuxtConfig({
     },
   },
   devtools: { enabled: true },
-  css: ["~/assets/css/main.css", "~/assets/css/tailwind.css"],
-  modules: ["@nuxtjs/tailwindcss"],
+  css: ["~/assets/css/main.css", "~/assets/css/base.css"],
+  modules: ["@nuxt/ui"],
+  runtimeConfig: {
+    dbURI: process.env.DATABASE_MONGODB_URI,
+  }
 });

@@ -6,9 +6,9 @@ useHead({
 });
 </script>
 <template>
-  <div>
+  <UApp>
     <NuxtLayout>
       <NuxtPage />
     </NuxtLayout>
-  </div>
+  </UApp>
 </template>
