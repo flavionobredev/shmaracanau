@@ -41,8 +41,14 @@ export default defineNuxtConfig({
   },
   devtools: { enabled: true },
   css: ["~/assets/css/main.css", "~/assets/css/base.css"],
+  colorMode: {
+    preference: "dark",
+  },
+  routeRules: {
+    "/": { prerender: true },
+  },
   modules: ["@nuxt/ui"],
   runtimeConfig: {
     dbURI: process.env.DATABASE_MONGODB_URI,
-  }
+  },
 });

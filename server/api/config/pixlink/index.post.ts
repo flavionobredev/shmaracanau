@@ -1,10 +1,8 @@
-import { makeThemeConfigRepository } from "~/server/infra/database/factories/theme-config.factory";
-import { createMongooseConnection } from "~/server/utils/mongoose";
+import { makePixLinkRepository } from "~/server/infra/database/factories/pix-link.factory";
 
 export default defineEventHandler(async () => {
   try {
-    await createMongooseConnection();
-    const repository = makeThemeConfigRepository();
+    const repository = makePixLinkRepository();
     console.log("pre request");
     const result = await repository.testFromDb();
     console.log("result -> ", result);
