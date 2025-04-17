@@ -10,9 +10,13 @@ export default defineNuxtPlugin(async (nuxtApp) => {
     messagingSenderId: import.meta.env.VITE_FIREBASE_MESSAGINGSENDERID,
     appId: import.meta.env.VITE_FIREBASE_APPID,
   };
-  if (!config) {
-    throw new Error("Firebase config is not defined");
+
+  // Validate Firebase configuration
+  const missingKeys = Object.entries(config).filter(([key, value]) => !value).map(([key]) => key);
+  if (missingKeys.length > 0) {
+    throw new Error(`Firebase config is missing the following keys: ${missingKeys.join(", ")}`);
   }
+
   const firebaseApp = initializeApp(config);
   const auth = getAuth(firebaseApp);
   await auth.authStateReady();

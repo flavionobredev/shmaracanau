@@ -37,6 +37,10 @@ export default defineNuxtConfig({
         },
         { rel: "manifest", href: "/site.webmanifest" },
       ],
+      script: [],
+      noscript: [],
+      htmlAttrs: {},
+      bodyAttrs: {},
     },
   },
   devtools: { enabled: true },
@@ -44,7 +48,7 @@ export default defineNuxtConfig({
   colorMode: {
     preference: "dark",
   },
-  modules: ["@nuxt/ui"],
+  modules: ["@nuxt/ui", "nuxt-security"],
   runtimeConfig: {
     dbURI: process.env.DATABASE_MONGODB_URI,
   },
